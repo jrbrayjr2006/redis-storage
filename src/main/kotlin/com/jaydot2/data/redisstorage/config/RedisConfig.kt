@@ -1,5 +1,6 @@
 package com.jaydot2.data.redisstorage.config
 
+import com.jaydot2.data.redisstorage.model.UserEntity
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.data.redis.connection.RedisConnectionFactory
@@ -36,11 +37,10 @@ class RedisConfig {
 
     class BaseKeyspaceConfiguration : KeyspaceConfiguration() {
 
-        override fun initialConfiguration(): MutableIterable<KeyspaceSettings> {
+        override fun initialConfiguration(): Iterable<KeyspaceSettings> {
             // add configuration here
-            // val someSettings = KeyspaceSettings(Some::class.java, "some")
-            // return listOf(someSettings)
-            return super.initialConfiguration()
+            val userSettings = KeyspaceSettings(UserEntity::class.java, "users")
+            return listOf(userSettings)
         }
     }
 }
