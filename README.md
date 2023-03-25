@@ -1,5 +1,14 @@
 #  Redis Storage Application
 
+## Local Setup
+
+Install a local instance of Redis or run a Docker Redis image.
+
+Start the Redis Server.
+
+```cmd
+redis-server
+```
 
 ## References
 
