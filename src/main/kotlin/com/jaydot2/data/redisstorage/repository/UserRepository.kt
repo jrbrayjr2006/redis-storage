@@ -1,4 +1,4 @@
-package com.jaydot2.data.redisstorage
+package com.jaydot2.data.redisstorage.repository
 
 import com.jaydot2.data.redisstorage.model.UserEntity
 import org.springframework.data.repository.CrudRepository
