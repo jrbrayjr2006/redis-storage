@@ -10,6 +10,10 @@ Start the Redis Server.
 redis-server
 ```
 
+## Testing
+
+The Mockk framework is used instead of Mockito for this project since it is written in Kotlin.
+
 ## References
 
 - [Redis](https://redis.io)

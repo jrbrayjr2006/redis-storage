@@ -11,7 +11,7 @@ class UserController {
 
     @GetMapping("/user/{id}")
     fun getUserById(@PathVariable id: String) : ResponseEntity<UserEntity> {
-        val user = UserEntity("Bob", "Jones", "P")
+        val user = UserEntity(id, "Bob", "Jones", "P")
         return ResponseEntity.ok(user)
     }
 }
