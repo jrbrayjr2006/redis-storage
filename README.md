@@ -18,3 +18,4 @@ The Mockk framework is used instead of Mockito for this project since it is writ
 
 - [Redis](https://redis.io)
 - [Spring Boot Testing with Kotlin](https://www.baeldung.com/kotlin/spring-boot-testing)
+- [Lombok compiler plugin](https://kotlinlang.org/docs/lombok.html)

@@ -8,4 +8,9 @@ class RedisStorageApplication
 
 fun main(args: Array<String>) {
 	runApplication<RedisStorageApplication>(*args)
+
+}
+
+private fun initializeData() {
+
 }

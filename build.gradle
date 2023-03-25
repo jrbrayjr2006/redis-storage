@@ -5,6 +5,8 @@ plugins {
 	id 'io.spring.dependency-management' version '1.1.0'
 	id 'org.jetbrains.kotlin.jvm' version '1.7.22'
 	id 'org.jetbrains.kotlin.plugin.spring' version '1.7.22'
+	id 'org.jetbrains.kotlin.plugin.lombok' version '1.7.22'
+	id 'io.freefair.lombok' version '5.3.0'
 }
 
 group = 'com.jaydot2.data'
@@ -19,6 +21,7 @@ configurations {
 
 ext {
 	set('springmockkVersion', '3.0.1')
+	set('logbackVersion', '1.2.3')
 }
 
 repositories {
@@ -31,6 +34,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
 	implementation 'org.jetbrains.kotlin:kotlin-reflect'
+	implementation 'org.slf4j:slf4j-api:1.7.30'
+	implementation "ch.qos.logback:logback-classic:${logbackVersion}"
+	implementation "ch.qos.logback:logback-core:${logbackVersion}"
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
