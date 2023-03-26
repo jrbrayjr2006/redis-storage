@@ -17,7 +17,10 @@ class UserService(var userRepository: UserRepository) {
         return optionalUser.get()
     }
 
-    private fun buildDefaultUser(id: String) : UserEntity {
-        return UserEntity(id, "Bob", "Jones", "P")
+    fun saveDefaultUser(id: String) : UserEntity {
+        log.info("create default user...")
+        val user : UserEntity = UserEntity(id, "Bob", "Jones", "P")
+        userRepository.save(user)
+        return user
     }
 }

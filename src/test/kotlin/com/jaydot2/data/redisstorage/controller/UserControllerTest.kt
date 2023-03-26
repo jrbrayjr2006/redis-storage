@@ -31,4 +31,17 @@ class UserControllerTest(@Autowired val mockMvc: MockMvc) {
         mockMvc.perform(get("/user/{id}", id))
                 .andExpect(status().isOk)
     }
+
+    @Test
+    fun givenUserDoesNotExist_whenRequestToCreateUser_andSuccess_thenReturn202() {
+        // Given
+        val id = "some-id"
+        val user = UserEntity(id, "first", "last", "middle")
+        every { mockUserService.saveDefaultUser(id) } returns user
+
+        // When...Then
+        mockMvc.perform(get("/user/save/{id}", id))
+                .andExpect(status().isAccepted)
+
+    }
 }

@@ -27,4 +27,17 @@ class UserServiceTest {
         verify(exactly = 1) {mockUserRepository.findById(userId)}
         assertEquals(result, optionalUser.get())
     }
+
+    @Test
+    fun givenUserDoesNotExist_whenRequestToSaveUser_thenCallRespositorySave() {
+        // Given
+        val userId = "some-id"
+        val user : UserEntity = UserEntity(userId, "first", "last", "middle")
+        every {mockUserRepository.save(any())} returns user
+        // When
+        val result = userService.saveDefaultUser(userId);
+
+        // Then
+        verify(exactly = 1) {mockUserRepository.save(any())}
+    }
 }
