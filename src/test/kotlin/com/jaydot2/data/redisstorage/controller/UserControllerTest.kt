@@ -4,17 +4,20 @@ import com.jaydot2.data.redisstorage.model.UserEntity
 import com.jaydot2.data.redisstorage.service.UserService
 import com.ninjasquad.springmockk.MockkBean
 import io.mockk.every
-import io.mockk.mockk
-import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
+import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
+import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.test.context.junit.jupiter.SpringExtension
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
-import org.springframework.test.web.servlet.setup.MockMvcBuilders
 
-@WebMvcTest
+
+@AutoConfigureMockMvc
+@SpringBootTest
+@ExtendWith(SpringExtension::class)
 class UserControllerTest(@Autowired val mockMvc: MockMvc) {
 
     @MockkBean
