@@ -24,6 +24,12 @@ Start the Redis Server.
 redis-server
 ```
 
+Start the Redis CLI in another terminal window.
+
+```cmd
+redis-cli
+```
+
 ## Testing
 
 The Mockk framework is used instead of Mockito for this project since it is written in Kotlin.
@@ -34,3 +40,4 @@ The Mockk framework is used instead of Mockito for this project since it is writ
 - [Redis Docker Image](https://hub.docker.com/_/redis)
 - [Spring Boot Testing with Kotlin](https://www.baeldung.com/kotlin/spring-boot-testing)
 - [Lombok compiler plugin](https://kotlinlang.org/docs/lombok.html)
+- [Reading and Writing JSON in Kotlin with Jackson](https://stackabuse.com/reading-and-writing-json-in-kotlin-with-jackson/)

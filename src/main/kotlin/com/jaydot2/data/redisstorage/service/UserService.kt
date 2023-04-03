@@ -33,4 +33,12 @@ class UserService(var userRepository: UserRepository, var jsonToObjectTransforme
         log.info("saving ${userEntity?.firstName} to database...")
         userRepository.save(userEntity)
     }
+
+    fun loadAllData() {
+        log.info("load multiple records into data storage...")
+        val jsonFile : File = ResourceUtils.getFile("classpath:data/dataset.json")
+        val users : MutableList<UserEntity> = jsonToObjectTransformer.createUserEntityListFromJsonArray(jsonFile)
+        val result: Iterable<UserEntity>  = userRepository.saveAll(users)
+    }
+
 }

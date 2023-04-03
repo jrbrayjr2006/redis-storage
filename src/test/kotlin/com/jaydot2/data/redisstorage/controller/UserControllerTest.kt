@@ -47,4 +47,12 @@ class UserControllerTest(@Autowired val mockMvc: MockMvc) {
                 .andExpect(status().isAccepted)
 
     }
+
+    @Test
+    fun givenUsersDoNotExist_whenRequestLoadAll_thenReturnSuccess() {
+        // Given
+        every { mockUserService.loadAllData() } returns Unit
+        // When...Then
+        mockMvc.perform(get("/user/load/loadAll")).andExpect(status().isOk)
+    }
 }

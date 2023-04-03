@@ -1,0 +1,32 @@
+[
+  {
+    "id": "301",
+    "firstName": "Tony",
+    "lastName": "Stark",
+    "middleName": "I"
+  },
+  {
+    "id": "302",
+    "firstName": "Bruce",
+    "lastName": "Banner",
+    "middleName": "B"
+  },
+  {
+    "id": "303",
+    "firstName": "Wanda",
+    "lastName": "Maximoff",
+    "middleName": "S"
+  },
+  {
+    "id": "304",
+    "firstName": "Carol",
+    "lastName": "Danvers",
+    "middleName": "M"
+  },
+  {
+    "id": "305",
+    "firstName": "Steve",
+    "lastName": "Rogers",
+    "middleName": "A"
+  }
+]

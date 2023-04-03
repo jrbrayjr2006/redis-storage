@@ -36,4 +36,10 @@ class UserController(var userService : UserService) {
         log.info("load data from file...")
         userService.loadData()
     }
+
+    @GetMapping("/load/loadAll")
+    fun loadAllData() {
+        log.info("loading all data...")
+        userService.loadAllData()
+    }
 }

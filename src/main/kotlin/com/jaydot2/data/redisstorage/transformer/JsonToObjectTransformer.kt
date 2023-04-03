@@ -1,6 +1,8 @@
 package com.jaydot2.data.redisstorage.transformer
 
+import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.module.kotlin.readValue
 import com.jaydot2.data.redisstorage.model.UserEntity
 import lombok.extern.slf4j.Slf4j
 import org.slf4j.LoggerFactory
@@ -18,5 +20,12 @@ class JsonToObjectTransformer(var objectMapper : ObjectMapper) {
         val userEntity : UserEntity = objectMapper.readValue(jsonFile, UserEntity::class.java)
         log.info("The first name is ${userEntity?.firstName}")
         return userEntity
+    }
+
+    fun createUserEntityListFromJsonArray(jsonFile: File) : MutableList<UserEntity> {
+        val userJsonArray: JsonNode = objectMapper.readTree(jsonFile)
+        val jsonArrayAsString : String = objectMapper.writeValueAsString(userJsonArray)
+        var userList : MutableList<UserEntity> = objectMapper.readValue(jsonArrayAsString)//mutableListOf()
+        return userList
     }
 }
