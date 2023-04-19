@@ -7,6 +7,8 @@ plugins {
 	id 'org.jetbrains.kotlin.plugin.spring' version '1.7.22'
 	id 'org.jetbrains.kotlin.plugin.lombok' version '1.7.22'
 	id 'io.freefair.lombok' version '5.3.0'
+	id 'jacoco'
+	id 'org.sonarqube' version '3.3'
 }
 
 group = 'com.jaydot2.data'
@@ -22,6 +24,7 @@ configurations {
 ext {
 	set('springmockkVersion', '3.0.1')
 	set('logbackVersion', '1.2.3')
+	set('commonsCsvVersion', '1.10.0')
 }
 
 repositories {
@@ -35,6 +38,7 @@ dependencies {
 	implementation 'com.fasterxml.jackson.module:jackson-module-kotlin'
 	implementation 'org.jetbrains.kotlin:kotlin-reflect'
 	implementation 'org.slf4j:slf4j-api:1.7.30'
+	implementation "org.apache.commons:commons-csv:${commonsCsvVersion}"
 	implementation "ch.qos.logback:logback-classic:${logbackVersion}"
 	implementation "ch.qos.logback:logback-core:${logbackVersion}"
 	compileOnly 'org.projectlombok:lombok'
