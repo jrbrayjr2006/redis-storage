@@ -41,3 +41,5 @@ The Mockk framework is used instead of Mockito for this project since it is writ
 - [Spring Boot Testing with Kotlin](https://www.baeldung.com/kotlin/spring-boot-testing)
 - [Lombok compiler plugin](https://kotlinlang.org/docs/lombok.html)
 - [Reading and Writing JSON in Kotlin with Jackson](https://stackabuse.com/reading-and-writing-json-in-kotlin-with-jackson/)
+- [Introduction to Apache Commons CSV](https://www.baeldung.com/apache-commons-csv)
+- [Apache Commons CSV to Read and Write CSV files in Java](https://springhow.com/apache-commons-csv/)
