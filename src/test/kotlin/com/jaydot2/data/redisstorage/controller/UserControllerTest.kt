@@ -1,5 +1,6 @@
 package com.jaydot2.data.redisstorage.controller
 
+import com.jaydot2.data.redisstorage.config.AppConfig
 import com.jaydot2.data.redisstorage.model.UserEntity
 import com.jaydot2.data.redisstorage.service.UserService
 import com.ninjasquad.springmockk.MockkBean
@@ -9,6 +10,7 @@ import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
 import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.test.context.ContextConfiguration
 import org.springframework.test.context.junit.jupiter.SpringExtension
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get

@@ -2,6 +2,7 @@ package com.jaydot2.data.redisstorage.model
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder
 import lombok.AllArgsConstructor
+import lombok.Builder
 import lombok.Data
 import lombok.NoArgsConstructor
 import org.springframework.data.annotation.Id
@@ -10,6 +11,7 @@ import org.springframework.data.redis.core.RedisHash
 @RedisHash
 @JsonPropertyOrder
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 data class UserEntity(
