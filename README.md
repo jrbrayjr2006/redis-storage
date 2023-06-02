@@ -43,3 +43,5 @@ The Mockk framework is used instead of Mockito for this project since it is writ
 - [Reading and Writing JSON in Kotlin with Jackson](https://stackabuse.com/reading-and-writing-json-in-kotlin-with-jackson/)
 - [Introduction to Apache Commons CSV](https://www.baeldung.com/apache-commons-csv)
 - [Apache Commons CSV to Read and Write CSV files in Java](https://springhow.com/apache-commons-csv/)
+- [Introduction to MockServer](https://www.baeldung.com/mockserver)
+- [Mocking a WebClient in Spring](https://www.baeldung.com/spring-mocking-webclient)

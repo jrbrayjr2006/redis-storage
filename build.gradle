@@ -25,6 +25,8 @@ ext {
 	set('springmockkVersion', '3.0.1')
 	set('logbackVersion', '1.2.3')
 	set('commonsCsvVersion', '1.10.0')
+	set('mockServerVersion', '3.10.8')
+	set('mockwebserverVersion', '4.11.0')
 }
 
 repositories {
@@ -45,6 +47,9 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation "com.ninja-squad:springmockk:${springmockkVersion}"
+	testImplementation "org.mock-server:mockserver-netty:${mockServerVersion}"
+	testImplementation "org.mock-server:mockserver-client-java:${mockServerVersion}"
+	testImplementation("com.squareup.okhttp3:mockwebserver:${mockwebserverVersion}")
 }
 
 tasks.withType(KotlinCompile) {
